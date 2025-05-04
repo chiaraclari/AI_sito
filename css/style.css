@@ -1,0 +1,1089 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../immagini/sfon.jpg");
+  background-size: contain;         /* adatta l'immagine per coprire tutto */
+  background-position: center;    /* centra l'immagine */
+}
+
+/* Colori personalizzati */
+.white {
+    color: white;
+  }
+  
+  .green {
+    color: #00e6c3; /* verde acqua */
+    margin-left: 0.3rem; /* oppure 8px se preferisci */
+
+  }
+  
+  /* Header layout */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1a1a1a; /* sfondo scuro per far risaltare il bianco */
+  }
+  
+  /* Logo */
+  .logo {
+    font-family: arial, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .logo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-family: arial, sans-serif;
+    font-size: 1.2rem;
+  }
+  
+  /* Hover effetto */
+  .menu a:hover {
+    color: #00e6c3;
+  }
+  
+  /* Pagina attiva */
+  .menu a.active {
+    color: #00e6c3;
+  }
+  
+  .menu ul li.dropdown {
+    position: relative; /* Necessario per il posizionamento del sottomenu */
+  }
+  
+  /* Sottomenu: posizionamento e miglioramenti */
+  .menu ul li ul.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    display: none;
+    flex-direction: column;
+    min-width: 12rem;
+    padding: 0.75rem 0;
+    z-index: 9999;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-height: 20rem;
+    transition: 0.3s ease-in-out;
+  }
+  
+  /* Mostra sottomenu al passaggio sopra */
+  .menu ul li:hover .submenu {
+    display: flex;
+    max-height: 20rem;
+  }
+  
+  /* Styling delle voci del sottomenu */
+  .submenu li a {
+    display: block; /* Fa espandere il link su tutta la larghezza */
+    padding: 0.625rem 1rem;
+    color: #fff;
+    white-space: nowrap;
+    font-family: arial, sans-serif;
+    font-size: 1rem;
+    width: 100%; /* Fa sì che il link occupi tutta la larghezza del sottomenu */
+  }
+  
+  /* Aggiungi spazio extra sopra la prima voce e sotto l'ultima */
+  .submenu li:first-of-type a {
+    padding-top: 1.25rem;
+  }
+  
+  .submenu li:last-of-type a {
+    padding-bottom: 1.25rem;
+  }
+  
+  /* Evidenzia tutta la riga quando si passa sopra */
+  .submenu li a:hover {
+    background-color: #444;
+    color: #00e6c3;
+  }
+
+  
+
+/*titolo home*/
+.titolo-home {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    margin-top: 3rem;
+    font-weight: bold;
+    font-family: arial, sans-serif;
+
+  }
+  .titolo-pagine {
+    text-align: left;
+    font-size: 2.6rem;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    padding-left: 4rem;
+  }
+  .testo-intro-pagine{
+    text-align: left;
+    color: white; /* verde acqua */
+    font-family: Arial, sans-serif;
+    font-size: 1.35rem;
+    padding-left: 4rem;
+    margin-top: 2rem;
+  }
+
+  
+
+  
+  
+  .testo-intro {
+    text-align: center;
+    color: #00e6c3; /* verde acqua */
+    font-family: Arial, sans-serif;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+  }
+
+  .foto-mano {
+    position: absolute;
+    top: 50%;         /* Posiziona verticalmente al centro */
+    right: 0;         /* Posiziona a destra */
+    transform: translateY(-50%); /* Centra verticalmente */
+    width: 60%;    /* Imposta una larghezza massima */
+    height: auto;      /* Mantiene le proporzioni */
+    z-index: -1;       /* Mette l'immagine dietro il contenuto */
+  }
+  
+
+  /*RIQUADRI*/
+  .riquadri-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 4rem;         /* ← spazio verticale tra le due righe */
+    justify-items: center;
+    margin-top: 60vh; /* spazio sotto la mano, regolabile */
+    margin-bottom: 30vh;
+    padding: 0 2rem;
+}
+
+.riquadro {
+    background-color: #1a1a1a;
+    border-radius: 1.5rem;
+    width: 15rem;
+    height: 10rem;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.riquadro img {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+}
+
+.riquadro:hover {
+    transform: scale(1.05);
+}
+.riquadro p {
+    font-family: arial, sans-serif;
+    font-weight: bold;
+}
+.riquadro {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+/*MINI RIQUADRI X OGNI PAGE*/
+.mini-riquadri-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 per riga */
+  gap: 1.5rem;
+  justify-items: center;
+  padding: 0 1rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.mini-riquadro {
+  background-color: #2a2a2a;
+  border-radius: 1rem;
+  width: 9rem;
+  height: 7rem;
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+  text-decoration: none;
+}
+
+.mini-riquadro:hover {
+  transform: scale(1.05);
+}
+
+.mini-riquadro img {
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.mini-riquadro p {
+  font-family: arial, sans-serif;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+
+
+
+.sezione-con-immagine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* Va a capo su schermi piccoli */
+    overflow: hidden;
+  }
+
+  .immagine-laterale img  {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem; /* opzionale: angoli arrotondati */
+    width: 100%; /* o usa rem, tipo: 20rem */
+  }
+.immagine-laterale{
+    margin-left: auto;
+    margin-right: -2%;
+
+}
+
+.immagine-laterale-app img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem; /* opzionale: angoli arrotondati */
+  width: 100%; /* o usa rem, tipo: 20rem */
+  transform: scaleX(-1); /* Specchia l'immagine orizzontalmente */
+}
+
+.immagine-laterale-etica  {
+  max-width: 100%;
+  height: AUTO;
+  border-radius: 1rem; /* opzionale: angoli arrotondati */
+  width: auto; /* o usa rem, tipo: 20rem */
+  transform: rotate(-56deg);
+  margin-right: 6.6%;
+
+  }
+
+#immagine-laterale-etica img {
+  margin-right: 10%;
+}
+.blocco-descrizione p{
+    text-align: left;
+    color: white; /* verde acqua */
+    font-family: Arial, sans-serif;
+    font-size: 1.35rem;
+    margin-top: -2rem;
+    max-width: 70%;
+    padding-left: 4rem;
+}
+.immagine-centrata-symb {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  position: relative;
+  top: 6rem; /* Sposta l'immagine più in basso, verso i riquadri */
+  z-index: 2; /* Assicura che stia sopra gli altri elementi */
+}
+.immagine-centrata-hyb {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 2rem; /* Sposta l'immagine più in basso, verso i riquadri */
+  z-index: 2; /* Assicura che stia sopra gli altri elementi */
+}
+.immagine-centrata-hyb img{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 2rem; /* Sposta l'immagine più in basso, verso i riquadri */
+  z-index: 2; /* Assicura che stia sopra gli altri elementi */
+}
+.immagine-centrata {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+  
+  .immagine-centrata img {
+    width: 20rem; 
+    height: auto;
+  }
+  
+  .contenitore-box {
+    width: 100%;
+    margin-top: -6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    text-align: left;
+  }
+  
+  .box-superiore {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  
+  .box-inferiore {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .box {
+    background-color: #0d0d0d;
+    border-radius: 0.8rem;
+    color: white;
+    padding: 1.5rem;
+    box-shadow: 0 0 1rem rgba(0, 255, 140, 0.3);
+    font-family: Arial, sans-serif;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .box.grande {
+    width: 20vw;
+    height: 50vh;
+    font-size: 1.2rem;
+
+  }
+
+  .box.piccolo {
+    width: 14vw;
+    height: 39vh;
+    font-size: 1.2rem;
+    background-color: #1a1a1a;
+    justify-content: flex-start;
+    text-align: left;
+    margin-bottom: 15vh;
+  }
+  .titolo-box-piccolo {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: white;
+  }
+  
+  .centra-testo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+  
+  .allinea-sx {
+    text-align: left;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .testo-box {
+    margin-top: 1.3rem;
+    font-size: 1rem;
+    color: #ccc;
+    text-align: left;
+    font-weight: normal;
+    font-family: arial, sans-serif;
+  }
+  
+  .lista-box {
+    margin-top: 0.6rem;
+    padding-left: 1.2rem;
+    text-align: left;
+    font-size: 0.90rem;
+    line-height: 1.5;
+    color: #eee;
+  }
+  
+  .lista-box li {
+    margin-bottom: 0.2rem;
+  }
+  .lista-box-et {
+    margin-top: 0.6rem;
+    padding-left: 1.2rem;
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #eee;
+    font-family: arial,sans-serif;
+  }
+  
+  .lista-box-et li {
+    margin-bottom: 0.2rem;
+  }
+  
+  .contenitore-riquadri-app {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4vw;
+    padding: 3vh 6vw; /* ← aumentato di poco */
+    flex-wrap: wrap;
+  }
+  
+  
+  .colonna-sinistra,
+  .colonna-destra {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    margin-left: auto;  /* Riduzione della distanza dal bordo sinistro */
+    margin-right: auto; /* Riduzione della distanza dal bordo destro */
+  }
+  
+  .colonna-sinistra {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .colonna-destra {
+    margin-top: 20vh; /* Sposta la colonna destra più in basso rispetto a prima */
+    padding: 3vh 4vw; /* Ridotto padding orizzontale */
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .riquadro-app {
+    width: 20rem;
+    height: 25rem;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(42, 114, 106, 1),
+      rgba(12, 12, 12, 1)
+    );
+    border-radius: 0.75rem;
+    padding: 1rem;
+    color: #fff;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+    margin-bottom: 24vh;
+  }
+  
+  
+  .riquadro-app:hover {
+    transform: scale(1.02);
+  }
+  
+  .riquadro-app h3 {
+    color:#00e6c3;
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+    font-family: arial, sans-serif;
+  }
+  
+  .riquadro-app p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    font-family: arial, sans-serif;
+  }
+  
+  .divider {
+    border: none;
+    border-top: 2px solid #00e6c3;
+    margin: 30px 0s;
+  }
+
+  .divider-et {
+    width: 38rem; /* stessa larghezza del riquadro-etica */
+    border: none;
+    border-top: 2px solid #00e6c3;
+    margin: 0 auto 1.5rem auto;
+  }
+  
+  
+
+/* Contenitore generale */
+.contenitore-riquadri-etica {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: -5rem;
+}
+
+/* Titoli delle sezioni centrati */
+.sezioni-etica {
+  text-align: center;
+  width: 100%;
+  color: #00e6c3;
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+  font-family: arial, sans-serif;
+
+}
+
+/* Paragrafi centrati sopra i riquadri */
+.contenitore-riquadri-etica p {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  font-family: arial, sans-serif;
+  color: white;
+  text-align: center;
+  margin-bottom: 1.5rem;
+
+}
+
+/* Riquadro grande centrato */
+.riquadro-etica {
+  position: relative;
+  width: 35rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(42, 114, 106, 1),
+    rgba(12, 12, 12, 1)
+  );
+  border-radius: 0.75rem;
+  padding: 1rem;
+  color: #fff;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Riquadro piccolo centrato */
+.riquadro-etica-piccolo {
+  position: relative;
+  width: 32rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(42, 114, 106, 1),
+    rgba(12, 12, 12, 1)
+  );
+  border-radius: 0.75rem;
+  padding: 1rem;
+  color: #fff;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Disattiva hover */
+.riquadro-etica:hover,
+.riquadro-etica-piccolo:hover {
+  transform: none;
+}
+
+/* Immagini con posizione invariata */
+.immagine-riquadro {
+  width: 25rem;
+  height: 18rem;
+  /*border: 0.1rem solid #7FDBFF; */
+  border-radius: 1rem;
+  object-fit: contain;
+  position: absolute;
+  top: 6rem;
+  left: 90%;
+  transform: translateY(-20%);
+  transform: translateX(-4rem);
+}
+
+.immagine-riquadro-piccolo {
+  width: 22rem;
+  height: 16rem;
+  border-radius: 1rem;
+  object-fit: contain;
+  position: absolute;
+  top: 6rem;
+  left: 90%;
+  transform: translateY(-20%);
+  transform: translateX(-4rem);
+
+}
+
+
+
+
+
+/*FOOTER*/
+.site-footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+    font-family: arial, sans-serif;
+    margin-top: 5rem;
+  }
+  
+  .footer-content p {
+    margin: 0.5rem 0;
+  }
+  @media (max-width: 1024px) {
+
+  
+    nav ul {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+  
+    nav ul li a {
+      font-size: 1rem;
+      padding: 0.5rem;
+    }
+  
+    .riquadri-container {
+      grid-template-columns: repeat(3, 1fr); /* 3 riquadri per riga */
+      gap: 1.5rem;
+      margin-top: 25vh;
+      margin-bottom: 10vh;
+      padding: 0 1rem;
+    }
+  
+    .riquadro {
+      width: 100%;
+      width: 4rem; /* Puoi ridurre la larghezza massima per adattare meglio il layout */
+      height: 4rem;
+      padding: 2rem 1rem;
+    }
+  
+    .riquadro img {
+      width: 2rem;
+      height: 2rem;
+      margin-bottom: 0.75rem;
+    }
+  
+    .riquadro p {
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  
+    footer {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+      width: 100%; /* Fai sì che il footer occupi tutta la larghezza */
+      box-sizing: border-box; /* Includi il padding nel calcolo della larghezza */
+    }
+    .titolo-home {
+      font-size: 2.5rem; /* Riduci la dimensione del font per schermi più piccoli */
+      margin-top: 2rem; /* Regola il margine superiore */
+    }
+  
+    /* Testo Intro */
+    .testo-intro {
+      font-size: 1.1rem; /* Riduci leggermente la dimensione del font */
+      margin-top: 1rem;
+    }
+  
+    /* Immagine mano */
+    .foto-mano {
+      position: absolute;  /* Mantieni la posizione assoluta per il bordo destro */
+      bottom: 0;           /* Posiziona l'immagine in fondo al contenitore */
+      right: 0;            /* Posiziona l'immagine al bordo destro */
+      width: 70%;          /* Riduci la larghezza per adattarsi meglio */
+      height: auto;        /* Mantiene le proporzioni */
+      z-index: -1;         /* Mette l'immagine dietro il contenuto */
+    }
+    header {
+      display: flex;
+      flex-direction: column; /* Disporre gli elementi in colonna (logo sopra menu) */
+      justify-content: center;
+      align-items: center; /* Allineamento al centro orizzontalmente */
+      padding: 0.5rem 1rem; /* Header più piccolo */
+      background-color: #1a1a1a; /* Sfondo scuro */
+    }
+  
+    /* Logo */
+    .logo {
+      font-family: arial, sans-serif;
+      font-size: 1.8em; /* Aumenta la dimensione del logo */
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      margin-bottom: 1rem; /* Distanza tra logo e menu */
+    }
+  
+    .logo a {
+      text-decoration: none;
+      color: white;
+    }
+  
+    /* Menu */
+    .menu ul {
+      list-style: none;
+      display: flex; /* Disporre le voci del menu in orizzontale */
+      justify-content:space-around; 
+      gap: 1.5rem; /* Distanza tra le voci */
+      padding: 0;
+    }
+  
+    .menu a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      font-family: arial, sans-serif;
+      font-size: 1.2rem;
+      padding: 0.75rem 1rem;
+      transition: color 0.3s;
+    }
+  
+    /* Hover effetto */
+    .menu a:hover {
+      color: #00e6c3;
+    }
+  
+    /* Pagina attiva */
+    .menu a.active {
+      color: #00e6c3;
+    }
+  
+    /* Dropdown menu */
+    .menu ul li.dropdown {
+      position: relative; /* Necessario per il posizionamento del sottomenu */
+    }
+  
+    /* Sottomenu: posizionamento e miglioramenti */
+    .menu ul li ul.submenu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #333;
+      display: none;
+      flex-direction: column;
+      min-width: 12rem;
+      padding: 0.75rem 0;
+      z-index: 9999;
+      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
+      border-radius: 0.5rem;
+      overflow: hidden;
+      max-height: 20rem;
+      transition: 0.3s ease-in-out;
+    }
+  
+    /* Mostra sottomenu al passaggio sopra */
+    .menu ul li:hover .submenu {
+      display: flex;
+      max-height: 20rem;
+    }
+  
+    /* Styling delle voci del sottomenu */
+    .submenu li a {
+      display: block;
+      padding: 0.625rem 1rem;
+      color: #fff;
+      white-space: nowrap;
+      font-size: 1rem;
+      width: 100%; /* Fa sì che il link occupi tutta la larghezza del sottomenu */
+    }
+  
+    /* Aggiungi spazio extra sopra la prima voce e sotto l'ultima */
+    .submenu li:first-of-type a {
+      padding-top: 1.25rem;
+    }
+  
+    .submenu li:last-of-type a {
+      padding-bottom: 1.25rem;
+    }
+  
+    /* Evidenzia tutta la riga quando si passa sopra */
+    .submenu li a:hover {
+      background-color: #444;
+      color: #00e6c3;
+    }
+  
+    .titolo-pagine {
+      font-size: 2rem;
+      text-align: left;
+      margin-top: 1.5rem;
+      padding-right:4rem ;
+    }
+  
+    .testo-intro-pagine {
+      font-size: 1.1rem;
+      text-align: left;
+      margin-top: 0.75rem;
+      padding-right:10%;
+    }
+  
+    .sezione-con-immagine {
+      flex-direction: column; /* immagine sotto il testo */
+      align-items: center;
+      gap: 1rem;
+    }
+    .blocco-descrizione p {
+      padding-left: 4rem;
+      font-size: 1.05rem;
+      margin-top: 3rem;
+      text-align: left;
+    }
+    .immagine-laterale {
+      margin: auto;
+      margin-top: -15%;
+      transform: translateX(8.5rem); /* Solleva leggermente il contenitore */
+
+
+    }
+  
+    .immagine-laterale img {
+    max-width: 70%; 
+     max-height: auto;
+
+    }
+
+      .mini-riquadri-container {
+        grid-template-columns: repeat(5, 1fr); /* 2 per riga su mobile */
+        gap: 1rem;
+        padding: 0 0.5rem;
+      }
+    
+      .mini-riquadro {
+        width: 2.8rem;
+        height: 5rem;
+        padding: 0.75rem;
+      }
+    
+      .mini-riquadro img {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    
+      .mini-riquadro p {
+        font-size: 0.75rem;
+      } 
+      
+      .immagine-centrata-symb {
+        max-width: 80%;
+      }
+      .contenitore-box {
+        margin-top: 0.5rem; /* Ridotto il margine superiore per sollevare il contenitore */
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Centra i box orizzontalmente */
+        align-items: center; /* Centra i box verticalmente */
+        flex-direction: column;
+        transform: translateY(-3rem); /* Solleva leggermente il contenitore */
+      }
+      
+      .box-superiore,
+      .box-inferiore {
+        display: flex;
+        justify-content: center; /* Centra i box orizzontalmente */
+        gap: 0.5rem; /* Ridotto il gap tra i i */
+        overflow-x: auto;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      
+      .box.grande {
+        width: 50vw; /* Larghezza orizzontale per i box grandi */
+        height: 30vh; /* Aumentato l'altezza dei box grandi */
+        font-size: 1rem;
+        min-width: 250px;
+        flex-shrink: 0;
+      }
+      
+      .box.piccolo {
+        width: 25vw; /* Larghezza più piccola per i box piccoli */
+        height: 16vh; /* Aumentato l'altezza dei box piccoli */
+        font-size: 0.95rem;
+        min-width: 180px;
+        flex-shrink: 0;
+        margin-bottom: 2rem;
+      }
+      
+     .box.piccolo:first-child {
+        margin-top: 5rem; /* Distanza maggiore solo tra l'ultimo box grande e il primo piccolo */
+      }
+      
+      .testo-box {
+        font-size: 0.85rem;
+      }
+  
+      .lista-box {
+        font-size: 0.85rem;
+      }
+      
+      .titolo-box-piccolo {
+        font-size: 0.95rem;
+      }
+    
+      .immagine-centrata-hyb img{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 2; /* Assicura che stia sopra gli altri elementi */
+        max-width: 90%;
+        top:-2rem;
+      }
+
+      
+  .contenitore-riquadri-app {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4vw;
+    padding: 3vh 6vw; /* ← aumentato di poco */
+    flex-wrap: wrap;
+  }
+  
+  .colonna-destra{
+    margin-top: 5vh;
+  }  .colonna-sinistra,
+  .colonna-destra {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;  /* Riduzione della distanza dal bordo sinistro */
+    margin-right: auto; /* Riduzione della distanza dal bordo destro */
+  }
+
+  .riquadro-app {
+    width: 20rem;
+    height: 25rem;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(42, 114, 106, 1),
+      rgba(12, 12, 12, 1)
+    );
+    border-radius: 0.75rem;
+    padding: 1rem;
+    color: #fff;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+    margin-bottom: 5vh;
+  }
+  
+  
+  .riquadro-app:hover {
+    transform: scale(1.02);
+  }
+  
+  .riquadro-app h3 {
+    color:#00e6c3;
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+    font-family: arial, sans-serif;
+  }
+  
+  .riquadro-app p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    font-family: arial, sans-serif;
+  }
+  .immagine-laterale-etica img {
+    max-width: 85%;
+  }
+    .riquadro-etica,
+    .riquadro-etica-piccolo {
+      width: 60%;        /* Occupa quasi tutta la larghezza dello schermo */
+      padding: 1rem;     /* Mantiene un po' di spazio interno */
+      margin-left: auto; /* Centra il riquadro orizzontalmente */
+      margin-right: auto;
+      align-items: center; /* Allinea il contenuto al centro */
+    }
+  
+    .divider-et {
+      width: 60%; /* stessa larghezza del riquadro-etica */
+      border: none;
+      border-top: 2px solid #00e6c3;
+      margin: 0 auto 1.5rem auto;
+    }
+    .sezioni-etica {
+      text-align: center;
+      width: 100%;
+      color: #00e6c3;
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+      font-family: arial, sans-serif;
+      padding-left: 20%;
+      padding-right: 20%;
+    
+    }
+    .contenitore-riquadri-etica p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      font-family: arial, sans-serif;
+      color: white;
+      text-align: left;
+      padding-left: 20%;
+      padding-right: 20%;
+    
+    }
+    .riquadro-etica,
+    .riquadro-etica-piccolo {
+      width: 80%;   /* Adatta la larghezza dei riquadri per mobile */
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    /* Immagine che si sposta sotto il riquadro su mobile */
+    .immagine-riquadro-piccolo {
+      position: relative;  /* Cambia la posizione per mobile */
+      top: auto;           /* Reset la posizione top */
+      margin-top: 1rem;    /* Distanza dal riquadro sopra */
+      left: auto;          /* Reset left */
+      transform: none;     /* Reset del trasforma */
+      width: 90%;          /* Adatta la larghezza dell'immagine per mobile */
+      height: auto;        /* Altezza automatica */
+      margin-left: auto;   /* Centrata orizzontalmente */
+      margin-right: auto;  /* Centrata orizzontalmente */
+    }
+    .immagine-riquadro {
+      position: relative;  /* Cambia la posizione per mobile */
+      top: auto;           /* Reset la posizione top */
+      margin-top: 1rem;    /* Distanza dal riquadro sopra */
+      left: auto;          /* Reset left */
+      transform: none;     /* Reset del trasforma */
+      width: 90%;          /* Adatta la larghezza dell'immagine per mobile */
+      height: auto;        /* Altezza automatica */
+      margin-left: auto;   /* Centrata orizzontalmente */
+      margin-right: auto;  /* Centrata orizzontalmente */
+    }
+
+
+  }
+  
